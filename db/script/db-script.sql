@@ -387,6 +387,22 @@ DELIMITER ;
 -- CALL sp_editar_usuario("1234", "1234", "test@test.com", "Diego", "Lopez Garcia", "Nueva direccion", "administrador", "123456789");
 
 -- -----------------------------------------------------
+--  STORED PROCEDURE OBTENER USUARIOS DEMO
+-- -----------------------------------------------------
+
+DROP PROCEDURE IF EXISTS sp_obtener_usuarios_demo;
+
+DELIMITER //
+CREATE PROCEDURE sp_obtener_usuarios_demo()
+BEGIN
+    SELECT res.activo, res.cedula, res.email, res.nombre, res.apellidos, res.direccion, ro.rol FROM tb_responsable AS res
+    INNER JOIN tb_rol AS ro ON ro.rol_id = res.rol_id;
+END //
+DELIMITER ;
+
+-- CALL sp_obtener_usuarios_demo();
+
+-- -----------------------------------------------------
 --  STORED PROCEDURE OBTENER USUARIOS
 -- -----------------------------------------------------
 

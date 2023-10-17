@@ -13,6 +13,9 @@ export const spEliminarUsuario = `CALL sp_eliminar_usuario(?,?)`
 export const spActivarUsuario = `CALL sp_activar_usuario(?,?)`
 export const spEditarUsuario = `CALL sp_editar_usuario(?,?,?,?,?,?,?,?)`
 export const spObtenerUsuarios = `CALL sp_obtener_usuarios()`
+// Aqui se crea una constante que apunta a una llamada al SP
+// Siempre hacemos esto para todos los SP
+export const spObtenerUsuariosDemo = `CALL sp_obtener_usuarios_demo()`
 export const spGuardarQuejaAmbiental = `CALL sp_guardar_queja_ambiental(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
 export const spGuardarPagoBasura = `CALL sp_guardar_pago_basura(?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
 export const spGuardarTramiteInterno = `CALL sp_guardar_tramite_interno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
